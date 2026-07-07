@@ -6,28 +6,50 @@
     <title>fghj</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<header>
+    <button onclick="document.body.style.backgroundColor = rgba(12, 13, 8);; document.body.style.color = '#ffffff';">
+    Dark theme 🌙
+</button>
+
+<button onclick="document.body.style.backgroundColor = '#ffffff'; document.body.style.color = '#000000';">
+    Light theme ☀️
+</button>
+</header>
+<script>
+    function sendThemeToJava(themeName) {
+        // fetch — это встроенная в браузер функция, которая «стучится» к Java
+        fetch('/set-theme?name=' + themeName);
+    }
+</script>
+</header>
 <body>
-    <h1>Mountains</h1>  <!-- help searching system to understand what website will be about -->
-    <h2>landscape structure</h2>
-    <div class="parent-container">
-        <span>A mountain is a large, steep landform that rises significantly—typically over 600 meters—above the surrounding terrain</span>
+    <h1>Project Hail Mary</h1>  <!-- help searching system to understand what website will be about -->
+    <h2>ML Ryan Gosling</h2>
+    <div class="body-container">
+        <span> A sci-fi story about an Earth science teacher who wakes up alone on a spaceship with amnesia. He must remember his past and team up with an unexpected alien friend to stop a dangerous space microbe that is eating the Sun </span>
     </div>
-    <ul>
-        <li>item1</li>
-        <li>item2</li>
-    </ul>
-    <ol>
-        <li>item1</li>
-        <li>item2</li>
-    </ol>
+    <div class="bodylist-container">
+        <div>
+            <ol>
+                <li>Sun is dying because of Astrofage</li>
+                <li>Every star is infected</li>
+            </ol>
+        </div>
+        <div>
+            <ul>
+                <li>Rocky and Grace will safe stars</li>
+                <li>Find the predator</li>
+            </ul>
+        </div>
+    </div>
     <div class="container">
-        <div><img class="fit-picture" src="https://resources.travellocal.com/wp/uploads/2024/07/04145057/New-Zealand-Mount-Cook-ss-scaled.jpg" alt="Mountains"></div>
-        <div><img class="fit-picture" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlJLwd6faJzYOltOMDVURi0zxmp4-SEeojrnGt-jG5-T6g72eOcDvgmS5S&s=10" alt="Mountains"></div>
-        <div><img class="fit-picture" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnSlB8ND1xiBEEPrC8cHpRytkF_m6Eobh7mgvfgWVUNW2eO0oMfYxcebk&s=10" alt="Mountains"></div>  
-        <div><img class="fit-picture" src="https://www.muchbetteradventures.com/magazine/content/images/size/w2000/2019/06/13091225/iStock-157644719.jpg" alt="Mountains"></div>
-    </div class="double-container"> 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5697055.994338593!2d5.388113470066045!3d45.79592308089284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4789459fb534be51%3A0x38c7fdcd674c57d!2z0JDQu9GM0L_Riw!5e0!3m2!1sru!2skz!4v1783406760481!5m2!1sru!2skz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe> 
+        <div><img class="fit-picture" src="Rocky&Grace1.svg" alt="Rocky&Grace1.jpeg"></div>
+        <div><img class="fit-picture" src="Rocky&Grace3.svg" alt="Rocky&Grace3.jpeg"></div>  
+        <div><img class="fit-picture" src="Rocky&Grace2.svg" alt="Rocky&Grace2.jpeg"></div>
+    </div>
+    <div class="double-container"> 
         <img class="rotating-image" src="Earth_30_year_comparison_pillars-removebg-preview.png" alt="Mountains">
     </div> 
+    
 </body>
 </html> 
