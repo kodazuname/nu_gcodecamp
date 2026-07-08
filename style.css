@@ -114,12 +114,12 @@ header button:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
   padding-right: 17%;
   padding-left: 17%;
   border-radius: 15px;
   color: var(--text-main);
   transition: color 0.3s;
+  text-align: left;
 }
 
 .box-container {
