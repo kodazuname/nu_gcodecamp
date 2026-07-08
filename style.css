@@ -5,7 +5,7 @@
   --h1-color: #fafafa;
   --text-main: #cfcfcf;
   --text-span: #9c9c9c;
-  --card-bg: #cfcfcf;
+  --card-bg: #303030;
   --card-text: #121308; /* Dark text inside light cards */
   --header-bg: #222222;
   --btn-bg: #333333;
@@ -18,7 +18,7 @@ body.light-theme {
   --h1-color: #050505;
   --text-main: #303030;
   --text-span: #636363;
-  --card-bg: #303030;
+  --card-bg: #cfcfcf;
   --card-text: #fafafa; /* Light text inside dark cards */
   --header-bg: #dddddd;
   --btn-bg: #eeeeee;
@@ -58,15 +58,16 @@ header {
   padding: 20px;
   background-color: var(--header-bg);
   transition: background-color 0.3s;
+  border-radius: 17px;
 }
 
 /* Unified Button Layout & Color System */
 header button {
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 17px;
   font-family: "Trebuchet MS", sans-serif;
   border: 2px solid var(--btn-text);
-  border-radius: 8px;
+  border-radius: 17px;
   background-color: var(--btn-bg);
   color: var(--btn-text);
   cursor: pointer;
