@@ -32,25 +32,23 @@ body {
   color: var(--text-main);
   font-family: "Trebuchet MS", sans-serif;
   transition: background-color 0.3s, color 0.3s; /* Smooth theme transitions */
+  text-align: center;
 }
 
 h1 {
   font-size: 48px;
   color: var(--h1-color);
-  text-align: center;
 }
 
 h2 {
   font-size: 36px;
   color: var(--text-main);
-  text-align: center;
 }
 
 span {
   font-size: 24px;
   display: inline-block; 
   color: var(--text-span);
-  text-align: center;
 }
 
 header {
