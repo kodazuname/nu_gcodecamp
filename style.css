@@ -1,29 +1,91 @@
+/* --- THEME DEFINITIONS --- */
+:root {
+  /* Dark Theme Base Settings (Your exact colors) */
+  --bg-color: rgba(12, 13, 8);
+  --h1-color: #fafafa;
+  --text-main: #cfcfcf;
+  --text-span: #9c9c9c;
+  --card-bg: #cfcfcf;
+  --card-text: #121308; /* Dark text inside light cards */
+  --header-bg: #222222;
+  --btn-bg: #333333;
+  --btn-text: #ffffff;
+}
+
+body.light-theme {
+  /* Light Theme Settings (Perfect mathematical opposites) */
+  --bg-color: rgba(243, 242, 247);
+  --h1-color: #050505;
+  --text-main: #303030;
+  --text-span: #636363;
+  --card-bg: #303030;
+  --card-text: #fafafa; /* Light text inside dark cards */
+  --header-bg: #dddddd;
+  --btn-bg: #eeeeee;
+  --btn-text: #000000;
+}
+
+/* --- YOUR ACTUAL STYLES (Using Variables) --- */
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: "Trebuchet MS", sans-serif;
+  transition: background-color 0.3s, color 0.3s; /* Smooth theme transitions */
+}
+
+h1 {
+  font-size: 48px;
+  color: var(--h1-color);
+  text-align: center;
+}
+
+h2 {
+  font-size: 36px;
+  color: var(--text-main);
+  text-align: center;
+}
+
+span {
+  font-size: 24px;
+  display: inline-block; 
+  color: var(--text-span);
+  text-align: center;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+  background-color: var(--header-bg);
+  transition: background-color 0.3s;
+}
+
+/* Unified Button Layout & Color System */
+header button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: "Trebuchet MS", sans-serif;
+  border: 2px solid var(--btn-text);
+  border-radius: 8px;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+/* Hover effect that automatically works for both dark and light themes */
+header button:hover {
+  filter: brightness(1.2);
+}
+
 .fit-picture {
   width: 250px;
   height: 250px;
   border-radius: 17%;
 }
-h1 {
-  font-size: 48px;
-  color: #fafafa;
-  text-align: center;
-}
-h2 {
-  font-size: 36px;
-  color: #cfcfcf;
-  text-align: center;
-}
-span {
-  font-size: 24px;
-  align-items: center;
-  justify-content: center;
-  color: #9c9c9c;
-  text-align: center;
-}
-body {
-  background-color: rgba(12, 13, 8);
-  font-family: "Trebuchet MS", sans-serif;
-}
+
 .container {
   display: flex;
   background-color: rgba(86, 30, 255, 0);
@@ -34,18 +96,22 @@ body {
 }
 
 .container div {
-  background-color: #cfcfcf;
+  background-color: var(--card-bg);
+  color: var(--card-text);
   margin: 17px;
   padding: 17px;
   font-size: 17px;
   border-radius: 17%;
+  transition: background-color 0.3s, color 0.3s;
 }
+
 .body-container {
   padding-right: 17%;
   padding-left: 17%;
   text-align: center;
   border-radius: 15px;
 }
+
 .bodylist-container {
   display: flex;
   flex-direction: row;
@@ -54,14 +120,17 @@ body {
   padding-right: 17%;
   padding-left: 17%;
   border-radius: 15px;
-  color: #cfcfcf;
+  color: var(--text-main);
+  transition: color 0.3s;
 }
+
 .box-container {
   border-radius: 15px;
 }
-.rotating-image{
-  align-items: center;
-  justify-content: center;
+
+.rotating-image {
+  display: block;
+  margin: 0 auto;
   width: 250px;
   animation: spin 17s linear infinite;
 }
@@ -70,6 +139,7 @@ body {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
 .double-container {
   display: flex;
   justify-content: space-around;
